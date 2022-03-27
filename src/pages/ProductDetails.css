@@ -1,0 +1,118 @@
+.product-wrapper {
+  padding: 50px;
+  display: flex;
+}
+.product-imgContaier {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.product-infoContainer {
+  padding: 0 50px;
+  flex: 1;
+}
+.product-title {
+  font-weight: 200;
+}
+.product-desc {
+  margin: 20px 0;
+}
+.product-price {
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.product-filterContainer {
+  width: 50%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.product-filter {
+  display: flex;
+  align-items: center;
+}
+.product-filter-title {
+  font-size: 20px;
+  font-weight: 200;
+  margin-right: 20px;
+}
+.product-filter-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.product-filter select {
+  padding: 1px 5px;
+  outline: none;
+}
+.product-addContainer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.product-amountContainer {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.product-amount {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+.product-addToCart {
+  padding: 10px 15px;
+  border: 1px solid teal;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.product-addToCart:hover {
+  box-shadow: inset 200px 0 teal;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .product-wrapper {
+    padding: 0 20px 40px;
+    flex-direction: column;
+  }
+  .product-infoContainer {
+    padding: 50px 0 70px;
+    flex: 1;
+  }
+  .product-filterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .product-filter-color {
+    margin: 15px 0;
+  }
+
+  .product-addContainer {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .product-addToCart {
+    margin-top: 20px;
+  }
+}

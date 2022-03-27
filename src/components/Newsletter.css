@@ -1,0 +1,68 @@
+.news {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.news-title {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+.news-desc {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.news-input {
+  width: 50%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+.news-input input {
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  flex: 8;
+  padding: 5px 20px;
+  outline: none;
+}
+.news-input button {
+  flex: 1;
+  background-color: rgba(0, 128, 128, 0.3);
+  color: rgb(0, 0, 0);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .news {
+    height: 30vh;
+    margin-bottom: 60px;
+  }
+  .news-title {
+    font-size: 60px;
+  }
+  .news-desc {
+    font-size: 20px;
+    text-align: center;
+  }
+  .news-input {
+    width: 80%;
+    border-radius: 10px;
+  }
+  .news-input input {
+    flex: 5;
+  }
+  .news-input button {
+    flex: 1;
+  }
+}
