@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import { useSelector } from "react-redux";
+import Search from "./pages/Search";
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
+          <Route path="/search/:search" exact element={<Search />} />
           <Route path="/products/" element={<ProductList />} />
           <Route path="/products/:category" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />

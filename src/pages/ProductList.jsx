@@ -12,9 +12,22 @@ const ProductList = () => {
   const category = location.pathname.split("/")[2];
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("Newest");
-
+  console.log("filters", filters);
   const handleFilters = (e) => {
-    setFilters((p) => ({ ...p, [e.target.name]: e.target.value }));
+    if (e.target.value !== "All colors" && e.target.value !== "All Sizes")
+      setFilters((p) => ({ ...p, [e.target.name]: e.target.value }));
+    if (e.target.value === "All colors") {
+      const obj = { ...filters };
+      delete obj["color"];
+      console.log("obj", obj);
+      setFilters(obj);
+    }
+    if (e.target.value === "All Sizes") {
+      const obj = { ...filters };
+      delete obj["size"];
+      console.log("obj", obj);
+      setFilters(obj);
+    }
   };
   const handleSort = (e) => {
     setSort({ [e.target.name]: e.target.value });
@@ -28,20 +41,16 @@ const ProductList = () => {
         <div className="productList-filter">
           <span className="filterText">Filter Products: </span>
           <select onChange={handleFilters} name="color" id="">
-            <option disabled defaultChecked>
-              Color
-            </option>
-            <option>White</option>
-            <option>Black</option>
-            <option>Red</option>
-            <option>Blue</option>
-            <option>Yellow</option>
-            <option>Green</option>
+            <option defaultChecked>All colors</option>
+            <option>white</option>
+            <option>black</option>
+            <option>red</option>
+            <option>blue</option>
+            <option>yellow</option>
+            <option>green</option>
           </select>
           <select onChange={handleFilters} name="size" id="">
-            <option disabled defaultChecked>
-              Size
-            </option>
+            <option defaultChecked>All Sizes</option>
             <option>XS</option>
             <option>S</option>
             <option>M</option>
