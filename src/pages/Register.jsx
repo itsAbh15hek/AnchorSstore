@@ -13,7 +13,7 @@ const Register = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     if (password === password2) {
-      const userN = await publicRequest.post("/auth/register", {
+      await publicRequest.post("/auth/register", {
         username,
         email,
         password,
