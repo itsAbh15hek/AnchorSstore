@@ -13,9 +13,7 @@ import lodash from "lodash";
 const Product = ({ item }) => {
   const user = useSelector((state) => state.user.currentUser);
   const updatedUser = lodash.cloneDeep(user);
-  const [isFav, setIsFav] = useState(
-    updatedUser?.favourites?.includes(item._id)
-  );
+  const [isFav, setIsFav] = useState(updatedUser.favourites.includes(item._id));
   const dispatch = useDispatch();
   const addFavourites = () => {
     try {
