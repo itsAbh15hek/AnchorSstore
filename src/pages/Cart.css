@@ -1,5 +1,3 @@
-.cart {
-}
 .cart-wrapper {
   margin: 20px 50px 200px;
   padding: 40px 50px;
@@ -30,11 +28,6 @@
   border-radius: 5px;
 }
 
-.cart-top-text {
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
-}
 .cart-bottom {
   display: flex;
   justify-content: space-between;
@@ -61,16 +54,10 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.cart-name {
-}
-.cart-id {
-}
 .cart-color {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-}
-.cart-id {
 }
 .cart-price {
   flex: 1;

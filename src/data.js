@@ -27,19 +27,19 @@ export const categories = [
     id: 1,
     img: "https://cdn.shortpixel.ai/client/q_lqip,ret_wait,w_500,h_666/https://g3fashion.com/blog/wp-content/uploads/2020/06/white-shirt-with-jeans-e1596522762816.jpg",
     title: "Shirt Style!",
-    category: "tshirt",
+    category: "shirt",
   },
   {
     id: 2,
     img: "http://www.malemodelscene.net/wp-content/uploads/2016/11/David-Gandy-Autograph-MS-FW16-03-620x806.jpg",
     title: "Laungewear",
-    category: "men",
+    category: "laungewear",
   },
   {
     id: 3,
     img: "https://assets.ajio.com/medias/sys_master/root/h79/hbd/14751061311518/-1117Wx1400H-461056666-green-MODEL.jpg",
-    title: "Light Jackets",
-    category: "women",
+    title: "Jackets",
+    category: "jacket",
   },
 ];
 

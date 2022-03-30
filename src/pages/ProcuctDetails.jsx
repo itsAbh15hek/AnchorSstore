@@ -35,7 +35,8 @@ const ProcuctDetails = () => {
   }, [color, product, size]);
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product, quantity, color, size }));
+    const cartId = "Cart" + new Date().getTime();
+    dispatch(addProduct({ ...product, quantity, color, size, cartId }));
   };
 
   return (
@@ -57,7 +58,12 @@ const ProcuctDetails = () => {
                 [...product.color].map((pCol) => (
                   <div
                     className="product-filter-color"
-                    style={{ backgroundColor: `${pCol}` }}
+                    style={{
+                      backgroundColor: `${pCol}`,
+                      border: `${
+                        pCol === color ? "2px solid teal" : "1px solid white"
+                      }`,
+                    }}
                     onClick={() => setColor(pCol)}
                   ></div>
                 ))}

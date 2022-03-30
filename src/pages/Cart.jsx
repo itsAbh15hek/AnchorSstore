@@ -1,14 +1,23 @@
-import { Add, Remove } from "@mui/icons-material";
-import React from "react";
-import { useSelector } from "react-redux";
+import { Add, DeleteForeverOutlined, Remove } from "@mui/icons-material";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Anouncements from "../components/Anouncements";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { removeProduct } from "../redux/cartRedux";
 import "./Cart.css";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const [products, setProducts] = useState(cart.products);
+  const dispatch = useDispatch();
+  console.log("products", products);
+
+  const removeItem = (prod) => {
+    dispatch(removeProduct(prod));
+    setProducts((ps) => ps.filter((p) => p.cartId !== prod.cartId));
+  };
   return (
     <div className="cart">
       <Anouncements />
@@ -16,16 +25,20 @@ const Cart = () => {
       <div className="cart-wrapper">
         <h1 className="cart-title">Your Bag</h1>
         <div className="cart-top">
-          <button className="cart-top-button">Continue Shopping</button>
-          <div className="cart-top-texts">
-            <span className="cart-top-text">Shopping Bag (2)</span>
-            <span className="cart-top-text">Your Wishlist (0)</span>
-          </div>
-          <button className="cart-top-button">Checkout Now</button>
+          <Link to={"/products"} className="cart-top-button">
+            Continue Shopping
+          </Link>
+
+          <Link
+            to={cart.total >= 1 ? "/checkout" : ""}
+            className="cart-top-button"
+          >
+            Checkout Now
+          </Link>
         </div>
         <div className="cart-bottom">
           <div className="cart-info">
-            {cart.products.map((product) => (
+            {products.map((product) => (
               <div className="cart-product">
                 <div className="cart-detail">
                   <img src={product.img} alt="" className="cart-img" />
@@ -47,9 +60,9 @@ const Cart = () => {
                 </div>
                 <div className="cart-price">
                   <div className="cart-amtContainer">
-                    <Remove />
-                    <div className="cart-amount">{product.quantity}</div>
-                    <Add />
+                    <DeleteForeverOutlined
+                      onClick={() => removeItem(product)}
+                    />
                   </div>
                   <div className="cart-product-price">{`₹ ${
                     product.price * product.quantity
