@@ -27,6 +27,9 @@
   .productList-filterContainer {
     flex-direction: column;
   }
+  .productList-title {
+    font-size: 30px;
+  }
   .filterText {
     font-size: 15px;
     font-weight: 500;

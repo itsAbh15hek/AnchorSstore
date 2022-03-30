@@ -21,7 +21,7 @@ export const sliderItems = [
     title: "Men's Clothing",
     desc: "Upto 40% off.",
     bg: "transparent",
-    link: "autumn",
+    link: "men",
   },
 ];
 
