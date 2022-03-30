@@ -7,7 +7,7 @@ import { publicRequest } from "../requestMethods";
 
 const Search = () => {
   const location = useLocation();
-  const search = location.pathname.split("/")[2];
+  const search = location.pathname.split("/")[2].toLowerCase();
   const [products, setProducts] = useState([]);
   const [filteredProducts, setfilteredProducts] = useState([]);
   console.log(products);
