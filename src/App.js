@@ -13,12 +13,14 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import { useSelector } from "react-redux";
 import Search from "./pages/Search";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
   return (
     <div className="body-container">
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/search/:search" exact element={<Search />} />
