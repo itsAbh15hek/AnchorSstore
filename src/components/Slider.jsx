@@ -5,6 +5,7 @@ import {
 import React, { useEffect, useState } from "react";
 import "./Slider.css";
 import { sliderItems } from "../data";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -43,7 +44,9 @@ const Slider = () => {
             <div className="slider-infoContainer">
               <h1 className="slider-title">{slide.title}</h1>
               <p className="slider-description">{slide.desc}</p>
-              <button className="slider-button">Shop Now</button>
+              <Link to={`/products/${slide.link}`} className="slider-button">
+                Shop Now
+              </Link>
             </div>
           </div>
         ))}

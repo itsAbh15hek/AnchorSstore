@@ -41,6 +41,10 @@ const Search = () => {
     <div className="productList">
       <Anouncements />
       <Navbar />
+      <h1 style={{ margin: "10px 40px" }}>
+        Showing Results For: "{" "}
+        <span style={{ fontWeight: "300" }}>{search}</span> "
+      </h1>
       <div className="products">
         {filteredProducts.map((item) => (
           <Product item={item} key={item._id} />

@@ -18,6 +18,7 @@ const Cart = () => {
     dispatch(removeProduct(prod));
     setProducts((ps) => ps.filter((p) => p.cartId !== prod.cartId));
   };
+
   return (
     <div className="cart">
       <Anouncements />
@@ -93,12 +94,14 @@ const Cart = () => {
               <div className="cart-summary-text">Total</div>
               <div className="cart-summary-text">{`₹ ${cart.total}`}</div>
             </div>
-            <Link
-              to={cart.total >= 1 ? "/checkout" : ""}
-              className="cart-summary-btn"
-            >
-              Checkout
-            </Link>
+            <div className="cart-summary-item">
+              <Link
+                to={cart.total >= 1 ? "/checkout" : ""}
+                className="cart-summary-btn"
+              >
+                Checkout
+              </Link>
+            </div>
           </div>
         </div>
       </div>

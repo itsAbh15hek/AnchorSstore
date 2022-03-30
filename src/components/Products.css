@@ -2,12 +2,13 @@
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .products-product {
   flex: 1;
   margin: 20px;
   min-width: 400px;
+  max-width: 450px;
   height: 450px;
   display: flex;
   align-items: center;

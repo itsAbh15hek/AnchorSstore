@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="left">
-          <div className="searchContainer">
+          <form className="searchContainer">
             <input
               type="text"
               name="search"
@@ -29,9 +29,11 @@ const Navbar = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
             <Link to={search ? `/search/${search}` : ""}>
-              <Search style={{ color: "gray", fontSize: 16 }} />
+              <button type="submit">
+                <Search style={{ color: "gray", fontSize: 16 }} />
+              </button>
             </Link>
-          </div>
+          </form>
           <Link to={"/products"} className="productLink">
             Browse Products
           </Link>
