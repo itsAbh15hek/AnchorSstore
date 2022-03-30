@@ -1,4 +1,4 @@
-import { DeleteForeverOutlined } from "@mui/icons-material";
+import { Delete } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -60,10 +60,8 @@ const Cart = () => {
                   </div>
                 </div>
                 <div className="cart-price">
-                  <div className="cart-amtContainer">
-                    <DeleteForeverOutlined
-                      onClick={() => removeItem(product)}
-                    />
+                  <div className="cart-delete">
+                    <Delete onClick={() => removeItem(product)} />
                   </div>
                   <div className="cart-product-price">{`₹ ${
                     product.price * product.quantity
@@ -81,11 +79,11 @@ const Cart = () => {
             </div>
             <div className="cart-summary-item">
               <div className="cart-summary-text">Estimated Shipping</div>
-              <div className="cart-summary-text">₹ 10</div>
+              <div className="cart-summary-text">₹ 50</div>
             </div>
             <div className="cart-summary-item">
               <div className="cart-summary-text">Shipping Discount</div>
-              <div className="cart-summary-text">₹ -10</div>
+              <div className="cart-summary-text">₹ -50</div>
             </div>
             <div
               className="cart-summary-item"

@@ -42,6 +42,12 @@
   align-items: center;
   justify-content: center;
 }
+.news-input input:focus-visible {
+  background: rgba(255, 255, 255, 0.3);
+}
+.news-input button:hover {
+  color: white;
+}
 
 @media (max-width: 500px) {
   .news {

@@ -7,7 +7,7 @@
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(15px);
 }
 .cart-title {
   font-weight: 200;
@@ -66,9 +66,11 @@
   align-items: center;
   justify-content: center;
 }
-.cart-amtContainer {
-  display: flex;
-  align-items: center;
+.cart-delete {
+  margin-bottom: 30px;
+}
+.cart-delete:hover {
+  transform: scale(1.07);
 }
 
 .cart-amount {
