@@ -13,7 +13,6 @@ const Login = () => {
     e.preventDefault();
     login(dispatch, { username, password });
   };
-  useEffect(() => {}, []);
 
   return (
     <div className="login">

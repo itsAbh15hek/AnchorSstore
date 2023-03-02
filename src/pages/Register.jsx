@@ -6,7 +6,7 @@ import "./Register.css";
 
 const Register = () => {
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("second");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const dispatch = useDispatch();
