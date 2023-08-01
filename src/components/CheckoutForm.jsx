@@ -10,7 +10,7 @@ const CheckoutForm = ({ setIsShipping, setConfirmation }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { clientSecret } = await fetch(
-      "https://anchor-store.herokuapp.com/api/checkout/payment",
+      "https://fair-cod-pea-coat.cyclic.cloud/api/checkout/payment",
       {
         method: "POST",
         headers: {
