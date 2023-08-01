@@ -28,7 +28,7 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://cdn.shortpixel.ai/client/q_lqip,ret_wait,w_500,h_666/https://g3fashion.com/blog/wp-content/uploads/2020/06/white-shirt-with-jeans-e1596522762816.jpg",
+    img: "https://i.etsystatic.com/13008011/r/il/59cd60/1552972337/il_fullxfull.1552972337_p4ku.jpg",
     title: "Shirt Style!",
     category: "shirt",
   },
