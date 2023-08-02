@@ -10,7 +10,7 @@ const CheckoutForm = ({ setIsShipping, setConfirmation }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { clientSecret } = await fetch(
-      "https://fair-cod-pea-coat.cyclic.cloud/api/checkout/payment",
+      "https://anchorstore.onrender.com/api/checkout/payment",
       {
         method: "POST",
         headers: {
